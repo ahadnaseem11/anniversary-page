@@ -1,0 +1,148 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7, #f6e7d8, #c3e0dc);
+    background-size: 300% 300%;
+    animation: bgMove 7s ease infinite;
+}
+
+@keyframes bgMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 10px;
+}
+
+.hero-content {
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(14px);
+    padding: 40px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(255,20,147,0.3);
+    max-width: 900px;
+}
+
+.hero h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 72px;
+    font-weight: 700;
+    color: #b30059;
+    margin-bottom: 12px;
+    text-shadow: 3px 3px 12px rgba(179,0,89,0.4);
+}
+
+.subtitle {
+    font-size: 24px;
+    color: #222;
+    font-weight: 400;
+}
+
+/* SECTION TITLES */
+.section-title, .message-title {
+    font-family: "Dancing Script", cursive;
+    font-size: 56px;
+    color: #52006A;
+    text-shadow: 2px 2px 10px rgba(82,0,106,0.25);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* GALLERY GRID */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 22px;
+    padding: 20px;
+}
+
+.photo-card {
+    background: rgba(255,255,255,0.35);
+    backdrop-filter: blur(10px);
+    border-radius: 22px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.photo-card:hover {
+    transform: scale(1.04);
+}
+
+.photo-container img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+/* LIKE BUTTON */
+.like-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.like-btn .heart-icon {
+    color: #555;
+    font-size: 26px;
+    transition: 0.3s;
+}
+
+.like-btn.liked .heart-icon {
+    color: red;
+    transform: scale(1.5);
+}
+
+/* MESSAGE CARD */
+.message-card {
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(12px);
+    border-radius: 26px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(106,0,120,0.2);
+}
+
+.message-signature {
+    display: block;
+    font-family: "Dancing Script", cursive;
+    font-size: 34px;
+    font-weight: 700;
+    color: #b30000;
+    margin-top: 18px;
+    text-shadow: 2px 2px 8px rgba(179,0,0,0.2);
+}
+
+/* PARTICLES */
+#particles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0; left: 0;
+    z-index: -1;
+}
+.particle {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 50%;
+    animation: rise infinite linear;
+}
+@keyframes rise {
+    0% {transform: translateY(100vh);}
+    100% {transform: translateY(-5vh);}
+}
